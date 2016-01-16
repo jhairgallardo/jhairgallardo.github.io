@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-ca">
+<head>
+  <meta charset="utf-8">
+  <title>Jhair Gallardo</title>
+</head>
+<body>
 
-  {% include head.html %}
+<header>
+  <h1>Jhair Gallardo</h1>
+  <nav>
+    <ul>
+      <li><a href="{{site.baseurl}}/index.html">Home</a></li>
+      <li><a href="{{site.baseurl}}/research.html">Research</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <body>
+{{content}}
 
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include footer.html %}
-
-  </body>
-
+</body>
 </html>
