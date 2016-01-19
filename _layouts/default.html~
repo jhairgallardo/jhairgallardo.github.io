@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
-<center>
 <h1>Jhair Gallardo</h1>
-</center>
   <head>
     <title>{{ page.title }}</title>
     
