@@ -8,4 +8,4 @@ redirect_from:
   - /about.html
 ---
 
-Hi! My name is Gianmarco Gallardo. 
+Hi! My name is Gianmarco Gallardo.
