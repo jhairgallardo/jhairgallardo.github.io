@@ -489,6 +489,8 @@
 	  
 		<!-- Recent News -->
         <!-- <h4><strong>Oct 2023:</strong> <span class="newflag">Upcoming!</span> We will host the first <a href="https://unconf.continualai.org/" onclick="getOutboundLink('https://unconf.continualai.org/'); return false;">ContinualAI Unconference</a>!</h4> -->
+        <h4><strong>May 2024:</strong> Our TMLR paper <a href="https://arxiv.org/abs/2303.10725">"SIESTA: Efficient Online Continual Learning with Sleep"</a> got accepted in the journal track of CoLLAs 2024!</h4>
+        <h4><strong>May 2024:</strong> Our paper <a href="https://edas.info/web/sose2024/showManuscript.php?m=1571024835&type=final&ext=pdf&title=PDF+file">"Human Emotion Estimation through Physiological Data with Neural Networks"</a> got accepted in SoSE 2024!</h4>
         <h4><strong>Apr 2024:</strong> Our paper <a href="https://arxiv.org/abs/2308.13646">"GRASP: A Rehearsal Policy for Efficient Online Continual Learning"</a> got accepted in CoLLAs 2024!</h4>
         <h4><strong>Oct 2023:</strong> Our paper <a href="https://arxiv.org/abs/2303.10725">"SIESTA: Efficient Online Continual Learning with Sleep"</a> got accepted in Transactions on Machine Learning Research (TMLR)!</h4>
         <h4><strong>Aug 2023:</strong> Joined <a href="https://www.siemens-healthineers.com/">Siemens Healthineers</a> as an Image Analytics Intern working on self-supervised learning for medical imaging.</h4>
@@ -517,8 +519,61 @@
 	<div class="row">
 		<h2>Research</h2>
 	</div>
+
+    <!-- arXiv 2024 -->
+    <div class="row">
+		<div class="col-sm-8 col-sm-offset-2">
+			<h3><strong>arXiv 2024</strong>: What Variables Affect Out-Of-Distribution Generalization in Pretrained Models?</h3>
+			<h4>Md Yousuf Harun,  Kyungbok Lee, <strong>Jhair Gallardo</strong>, Giri Krishnan, Christopher Kanan</h4>
+			<h3>
+				<a href="https://arxiv.org/abs/2405.15018" onclick="getOutboundLink('https://arxiv.org/abs/2405.15018'); return false;" target="_blank"><button class="button">arXiv</button></a>
+                <!-- <a href="https://openreview.net/pdf?id=MqDVlBWRRV" onclick="getOutboundLink('https://openreview.net/pdf?id=MqDVlBWRRV'); return false;" target="_blank"><button class="button">Paper</button></a> -->
+                <a href="https://yousuf907.github.io/oodg/" onclick="getOutboundLink('https://yousuf907.github.io/oodg/'); return false;" target="_blank"><button class="button">Project Page</button></a>
+			</h3>
+		</div>
+	</div>
+
+    <div class="row">
+		<div class="col-sm-2 col-sm-offset-2">
+			<img src="images/the_tunnel_effect_updated.png" alt="What Variables Affect Out-Of-Distribution Generalization in Pretrained Models?" class="img-responsive"></img>
+		</div>
+		<div class="col-sm-6">
+			<h5 class="h5-small"><p>Embeddings produced by pre-trained deep neural networks (DNNs) are widely used; however, their efficacy for downstream tasks can vary widely. 
+                We study the factors influencing out-of-distribution (OOD) generalization of pre-trained DNN embeddings through the lens of the tunnel effect hypothesis, which 
+                suggests deeper DNN layers compress representations and hinder OOD performance. Contrary to earlier work, we find the tunnel effect is not universal. Based on 
+                10,584 linear probes, we study the conditions that mitigate the tunnel effect by varying DNN architecture, training dataset, image resolution, and augmentations. 
+                We quantify each variable's impact using a novel SHAP analysis. Our results emphasize the danger of generalizing findings from toy datasets to broader contexts.</p></h5>
+		</div>
+    </div>
+
+    <!-- SoSE 2024 -->
+    <div class="row">
+		<div class="col-sm-8 col-sm-offset-2">
+			<h3><strong>SoSE 2024</strong>: Human Emotion Estimation through Physiological Data with Neural Networks</h3>
+			<h4><strong>Jhair Gallardo</strong>, Celal Savur, Ferat Sahin, Christopher Kanan</h4>
+			<h3>
+				<a href="https://edas.info/web/sose2024/showManuscript.php?m=1571024835&type=final&ext=pdf&title=PDF+file" onclick="getOutboundLink('https://edas.info/web/sose2024/showManuscript.php?m=1571024835&type=final&ext=pdf&title=PDF+file'); return false;" target="_blank"><button class="button">Paper</button></a>
+                <!-- <a href="https://openreview.net/pdf?id=MqDVlBWRRV" onclick="getOutboundLink('https://openreview.net/pdf?id=MqDVlBWRRV'); return false;" target="_blank"><button class="button">Paper</button></a> -->
+                <!-- <a href="https://yousuf907.github.io/oodg/" onclick="getOutboundLink('https://yousuf907.github.io/oodg/'); return false;" target="_blank"><button class="button">Project Page</button></a> -->
+			</h3>
+		</div>
+	</div>
+
+    <div class="row">
+		<div class="col-sm-2 col-sm-offset-2">
+			<img src="images/sose2024.png" alt="Human Emotion Estimation through Physiological Data with Neural Networks" class="img-responsive"></img>
+		</div>
+		<div class="col-sm-6">
+			<h5 class="h5-small"><p>Effective collaboration between humans and robots necessitates that the robotic partner can perceive, learn from, and respond to the human's 
+                psycho-physiological conditions. This involves understanding the emotional states of the human collaborator. To explore this, we collected subjective assessments — specifically, 
+                feelings of surprise, anxiety, boredom, calmness, and comfort — as well as physiological signals during a dynamic 
+                human-robot interaction experiment. The experiment manipulated the robot's behavior to observe these responses. We gathered data from this non-stationary setting 
+                and trained an artificial neural network model to predict human emotion from physiological data. We found that using several subjects' data to train a general model 
+                and then fine-tuning it on the subject of interest performs better than training a model only using the subject of interest data.</p></h5>
+		</div>
+    </div>
 	
-    <!-- arXiv 2023 -->
+    <!-- CoLLAs 2024 -->
 	<div class="row">
 		<div class="col-sm-8 col-sm-offset-2">
 			<h3><strong>CoLLAs 2024</strong>: GRASP: A Rehearsal Policy for Efficient Online Continual Learning</h3>
@@ -530,7 +585,7 @@
 	</div>
 
     <div class="row">
-		<div class="col-sm-3 col-sm-offset-1">
+		<div class="col-sm-2 col-sm-offset-2">
 			<img src="images/grasp.PNG" alt="GRASP: A Rehearsal Policy for Efficient Online Continual Learning" class="img-responsive"></img>
 		</div>
 		<div class="col-sm-6">
@@ -538,7 +593,7 @@
 		</div>
     </div>
 
-	<!-- arXiv 2023 -->
+	<!-- TMLR 2023 -->
 	<div class="row">
 		<div class="col-sm-8 col-sm-offset-2">
 			<h3><strong>TMLR 2023</strong>: SIESTA: Efficient Online Continual Learning with Sleep</h3>
@@ -553,7 +608,7 @@
 	</div>
 
     <div class="row">
-		<div class="col-sm-3 col-sm-offset-1">
+		<div class="col-sm-2 col-sm-offset-2">
 			<img src="images/siesta.png" alt="SIESTA: Efficient Online Continual Learning with Sleep" class="img-responsive"></img>
 		</div>
 		<div class="col-sm-6">
@@ -585,7 +640,7 @@
 	</div>
 
     <div class="row">
-		<div class="col-sm-3 col-sm-offset-1">
+		<div class="col-sm-2 col-sm-offset-2">
 			<img src="images/cvprw_2023.PNG" alt="How Efficient Are Today's Continual Learning Algorithms?" class="img-responsive"></img>
 		</div>
 		<div class="col-sm-6">
@@ -606,7 +661,7 @@
 	</div>
 
     <div class="row">
-		<div class="col-sm-3 col-sm-offset-1">
+		<div class="col-sm-2 col-sm-offset-2">
 			<img src="images/self-supervised-cl.png" alt="Self-Supervised Training Enhances Online Continual Learning" class="img-responsive"></img>
 		</div>
 		<div class="col-sm-6">
@@ -623,7 +678,8 @@
 			<h2>Publications</h2>
 			<h4>Peer-Reviewed Papers</h4>
 			<h5><ul style="list-style-type:circle">
-                <li>M.Y. Harun, <strong>J. Gallardo</strong>, and C. Kanan. <a href="https://arxiv.org/abs/2308.13646" onclick="getOutboundLink('https://arxiv.org/abs/2308.13646'); return false;">GRASP: A Rehearsal Policy for Efficient Online Continual Learning</a>. In: Conference on Lifelong Learning Agents (CoLLAs), 2023</li>
+                <li><strong>J. Gallardo</strong>, C. Savur, F. Sahin, and C. Kanan. <a href="https://edas.info/web/sose2024/showManuscript.php?m=1571024835&type=final&ext=pdf&title=PDF+file" onclick="getOutboundLink('https://edas.info/web/sose2024/showManuscript.php?m=1571024835&type=final&ext=pdf&title=PDF+file'); return false;">Human Emotion Estimation through Physiological Data with Neural Networks</a>. In: System of Systems Engineering Conference (SoSE), 2024</li>
+                <li>M.Y. Harun, <strong>J. Gallardo</strong>, and C. Kanan. <a href="https://arxiv.org/abs/2308.13646" onclick="getOutboundLink('https://arxiv.org/abs/2308.13646'); return false;">GRASP: A Rehearsal Policy for Efficient Online Continual Learning</a>. In: Conference on Lifelong Learning Agents (CoLLAs), 2024</li>
                 <li>M.Y. Harun, <strong>J. Gallardo</strong>, T.L. Hayes, R. Kemker, and C. Kanan. <a href="https://arxiv.org/abs/2303.10725" onclick="getOutboundLink('https://arxiv.org/abs/2303.10725'); return false;">SIESTA: Efficient online continual learning with sleep</a>. Transactions on Machine Learning Research (TMLR), 2023</li>
 				<li>M.Y. Harun, <strong>J. Gallardo</strong>, T.L. Hayes and C. Kanan. <a href="https://arxiv.org/abs/2303.18171" onclick="getOutboundLink('https://arxiv.org/abs/2303.18171'); return false;">How efficient are today's continual learning algorithms?</a>. CVPR Workshop: Continual Learning in Computer Vision, 2023</li>
                 <li>I. Sur, Z. Daniels, A. Rahman, K. Faber, <strong>J. Gallardo</strong>, T.L. Hayes, C.E. Taylor, M.B. Gurbuz, J. Smith, S. Joshi, N. Japkowicz, M. Baron, Z. Kira, C. Kanan, R. Corizzo, A. Divakaran, M. Piacentino, J. Hostetler, and A. Raghavan. <a href="https://arxiv.org/abs/2212.04603" onclick="getOutboundLink('https://arxiv.org/abs/2212.04603'); return false;">System design for an integrated lifelong reinforcement learning agent for real-time strategy games</a>. In: International Conference on AI-ML Systems, 2022</li>
@@ -631,10 +687,10 @@
                 <li>G. Garcia, <strong>J. Gallardo</strong>, A. Mauricio, J. Lopez, and C. del Carpio. <a href="https://link.springer.com/chapter/10.1007/978-3-319-68612-7_72" onclick="getOutboundLink('https://link.springer.com/chapter/10.1007/978-3-319-68612-7_72'); return false;">Detection of Diabetic Retinopathy Based on a Convolutional Neural Network Using Retinal Fundus Images</a>. In: International Conference on Artificial Neural Networks (ICANN), 2017</li>
             </ul></h5>
 
-			<!-- <h4>Pre-Prints</h4>
+			<h4>Pre-Prints</h4>
 			<h5><ul style="list-style-type:circle">
-                <li>M.Y. Harun, <strong>J. Gallardo</strong>, and C. Kanan. <a href="https://arxiv.org/abs/2308.13646" onclick="getOutboundLink('https://arxiv.org/abs/2308.13646'); return false;">GRASP: A Rehearsal Policy for Efficient Online Continual Learning</a>. 2023</li>
-            </ul></h5> -->
+                <li>M.Y. Harun, K. Lee, <strong>J. Gallardo</strong>, G. Krishnan, and C. Kanan. <a href="https://arxiv.org/abs/2405.15018" onclick="getOutboundLink('https://arxiv.org/abs/2405.15018'); return false;">What Variables Affect Out-Of-Distribution Generalization in Pretrained Models?</a>. 2024</li>
+            </ul></h5>
 		</div>
 	</div>
 </div>
