@@ -112,11 +112,13 @@
         
         .jumbotron {
             /* background-image: url("images/bulbs.jpg"); */
-            background-size: 142% auto;
+            /* background-size: 142% auto; */
+            background-image: url("images/nodes.png");
+            background-size: 130% auto;
             background-align: center;
-            padding: 100px 25px;
+            /* padding: 100px 25px; */
             font-family: Montserrat, sans-serif;
-            background-color: #DDD0C8;
+            background-color: #ffffff;
         }
         
         .container-fluid {
@@ -124,7 +126,9 @@
         }
         
         .section-navbar {
-            color: #DDD0C8;
+            /* color: #DDD0C8;
+            background-color: #323232; */
+            color: #FFFFFF;
             background-color: #323232;
         }
         
@@ -144,8 +148,16 @@
         }
         
         .section-recent-news {
+            /* color: #323232;
+            background-color: #FFFFFF; */
             color: #323232;
-            background-color: #FFFFFF;
+            background-color: #DDD0C8;
+        }
+
+        .section-recent-news h4 {
+            font-size: 1.7rem;      /* shrink from ~19px down to ~14px (adjust as you like) */
+            line-height: 1.3em;     /* tighten up the spacing a bit */
+            margin-bottom: 0.4em;   /* reduce the gap under each item */
         }
         
         .section-research {
@@ -268,9 +280,12 @@
             font-family: Montserrat, sans-serif;
         }
         
-        .navbar li a,
+        .navbar-default .navbar-nav > li > a {
+            color: #F4F4F4F4 !important;
+        }
         .navbar .navbar-brand {
             font-family: Montserrat, sans-serif;
+            color: #F4F4F4F4;
         }
         
         .navbar-nav li a:hover,
@@ -279,10 +294,10 @@
             color: #323232 !important;
             transition: 0.3s;
         }
-        
+
         .navbar-default .navbar-toggle {
             border-color: transparent;
-            color: #fff !important;
+            color: #FFFFFF !important;
         }
         
         footer {
@@ -402,6 +417,32 @@
             background-color: #DDD0C8;
             color: #323232;
         }
+
+        .section-reviews {
+            background-color: #FFFFFF;      /* light grey background */
+            color: #323232;
+            text-align: justify;
+        }
+
+        .section-reviews h2 {
+            font-size: 1.75rem;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+        }
+
+        .review-buttons .btn {
+            margin: 0.3rem;
+            border-radius: 4px;
+            font-size: 1.5rem;
+            background-color: #eee;
+            border-color: #ddd;
+        }
+
+        .review-buttons .btn:hover {
+            background-color: #e0e0e0;
+        }
+
     </style>
 </head>
 
@@ -415,15 +456,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#myPage"><b>Jhair Gallardo</b></a>
+                <a class="navbar-brand" href="#myPage">Jhair Gallardo</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#about"><b>ABOUT</b></a></li>
-                    <li><a href="#recent"><b>NEWS</b></a></li>
-                    <li><a href="#research"><b>RESEARCH</b></a></li>
-                    <li><a href="#publications"><b>PUBLICATIONS</b></a></li>
-                    <li data-toggle="collapse" data-target=".navbar-collapse.in"><a href="data/Jhair_Gallardo_CV.pdf" onclick="getOutboundLink('data/Jhair_Gallardo_CV.pdf'); return false;" target="_blank"><b>CV</b></a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#recent">NEWS</a></li>
+                    <li><a href="#research">RESEARCH</a></li>
+                    <li><a href="#publications">PUBLICATIONS</a></li>
+                    <li data-toggle="collapse" data-target=".navbar-collapse.in"><a href="data/Jhair_Gallardo_CV.pdf" onclick="getOutboundLink('data/Jhair_Gallardo_CV.pdf'); return false;" target="_blank">CV</a></li>
                     </h1>
             </div>
         </div>
@@ -469,10 +510,22 @@
 <div id="about" class="container-fluid section-about-me">
   <div class="row">
     <h2>About Me</h2>
-    <div class="col-sm-4 col-sm-offset-3">
-        <h4>Hello! I am a PhD Candidate working under the supervision of <a href="https://chriskanan.com/">Dr. Christopher Kanan</a> in <a href="http://www.cis.rit.edu/">Chester F. Carlson Center for Imaging Science</a>
-            at <a href="https://www.rit.edu/">Rochester Institute of Technology (RIT)</a>. My research is focused on self-supervised learning, continual learning, and computer vision. I am mainly interested in efficient continual representation learning systems with minimal supervision.
+    <div class="col-sm-6 col-sm-offset-2">
+        <h4>
+            <p align="justify">Hello! I am a PhD Candidate working under the supervision of <a href="https://chriskanan.com/">Dr. Christopher Kanan</a> in <a href="http://www.cis.rit.edu/">Chester F. Carlson Center for Imaging Science</a>
+            at <a href="https://www.rit.edu/">Rochester Institute of Technology (RIT)</a>. My current research focuses on self-supervised learning and continual learning. I am mainly interested in efficient continual representation learning systems with minimal supervision.
             Previously, I interned at <a href="https://www.siemens-healthineers.com/">Siemens Healthineers</a>, where I worked on self-supervised learning techniques for medical imaging.
+            </p>
+            <p align="justify">
+            I received an BS in Mechatronics Engineering from <a href="https://www.uni.edu.pe/">Universidad Nacional de Ingeniería</a> where I worked on deep learning techniques for diabetic rethinopaty detection and 
+            Simultaneous Localization and Mapping (SLAM) techniques for mobile robot exploration.
+            </p>
+            <p align="justify"> 
+                You can find my <a href="data/Jhair_Gallardo_CV.pdf"><span style="color:#25d399;">CV here</span>.</a>
+            </p>
+            <p align="justify">
+                Here is my <a href="https://scholar.google.com/citations?user=gFQHAtQAAAAJ&hl=en&oi=sra" onclick="getOutboundLink(https://scholar.google.com/citations?user=gFQHAtQAAAAJ&hl=en&oi=sra); return false;" target="_blank"><span style="color:#25d399;">Google Scholar</span>.</a>
+			</p>
         </h4>
 	</div>
     <div class="col-sm-2">
@@ -730,6 +783,23 @@
 		</div>
 	</div>
 </div>
+
+<!-- Container (Conference Reviews) -->
+<div id="reviews" class="container-fluid section-reviews">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2 text-center">
+      <h2>Conference Reviews</h2>
+      <div class="review-buttons">
+        <button type="button" class="btn btn-default">CVPR (2024, 2025)</button>
+        <button type="button" class="btn btn-default">ICCV (2025)</button>
+        <button type="button" class="btn btn-default">CoLLAs (2025)</button>
+        <button type="button" class="btn btn-default">AAAI (2024)</button>
+        <!-- <button type="button" class="btn btn-default">CVPRW-CLVISION (2024)</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <footer class="container-fluid text-center">
   <a href="#myPage" title="To Top">
