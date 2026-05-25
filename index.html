@@ -176,9 +176,19 @@
         .section-about-me a {
             color: var(--text);
             background-color: var(--background);
-            text-align: justify;
+            text-align: left;
 			font-size: 20px;
             line-height: 1.8em;
+        }
+
+        .section-about-me .about-prose {
+            text-align: justify;
+        }
+
+        .section-about-me p,
+        .section-publications li,
+        .section-reviews li {
+            text-align: left;
         }
 
         .section-about-me a {
@@ -196,9 +206,9 @@
         }
 
         .section-recent-news h4 {
-            font-size: 1.7rem;      /* shrink from ~19px down to ~14px (adjust as you like) */
-            line-height: 1.3em;     /* tighten up the spacing a bit */
-            margin-bottom: 0.4em;   /* reduce the gap under each item */
+            font-size: 1.7rem;
+            line-height: 1.3em;
+            margin-bottom: 0.4em;
         }
         
         .section-research {
@@ -214,12 +224,33 @@
         .section-research h4 {
             text-align: center;
         }
+
+        .venue-tag {
+            display: inline-block;
+            padding: 3px 9px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background-color: var(--section-alt);
+            color: var(--accent-hover);
+            font-size: 0.82em;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
         
         .section-publications,
         .section-publications a {
             color: var(--text);
             background-color: var(--section-alt);
-            text-align: justify;
+            text-align: left;
+        }
+
+        .section-publications ul {
+            padding-left: 20px;
+        }
+
+        .section-publications li {
+            margin-bottom: 12px;
+            line-height: 1.55;
         }
 
         .section-publications a {
@@ -368,6 +399,18 @@
         
         footer {
             background-color: var(--background);
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        footer p {
+            margin: 6px 0 0;
+        }
+
+        footer a {
+            color: var(--accent-hover);
+            font-weight: 600;
         }
         
         footer .glyphicon {
@@ -532,7 +575,7 @@
             background-color: #FFFFFF;
             border-color: var(--accent);
             color: var(--accent-hover);
-            box-shadow: 0 8px 18px rgba(15, 118, 110, 0.16);
+            box-shadow: 0 8px 18px rgba(16, 112, 160, 0.16);
             transform: translateY(-1px);
         }
 
@@ -544,7 +587,7 @@
         .section-reviews {
             background-color: var(--background);
             color: var(--text);
-            text-align: justify;
+            text-align: left;
         }
 
         .section-reviews h2 {
@@ -601,7 +644,6 @@
 
     <div class="jumbotron text-center">
     <h1>Jhair Gallardo</h1>
-        
   	<div class = "external-link-container">
 	  <div class="external-link-center-wrapper">
 	    <div class = "external-link-icon">
@@ -625,7 +667,7 @@
             </a>
 	    </div>
 	    <div class = "external-link-icon">
-	    	<a href="mailto:gg4099@rit.edu" aria-label="Email" title="Email">
+	    	<a href="mailto:jhairgallardo@gmail.com" aria-label="Email" title="Email">
                 <span class="external-link-circle"><i class="fas fa-envelope"></i></span>
             </a>
 	    </div>
@@ -639,18 +681,18 @@
     <h2>About Me</h2>
     <div class="col-sm-6 col-sm-offset-2">
         <h4>
-            <p align="justify">Hello! I am a PhD Candidate working under the supervision of <a href="https://chriskanan.com/">Dr. Christopher Kanan</a> in <a href="http://www.cis.rit.edu/">Chester F. Carlson Center for Imaging Science</a>
+            <p class="about-prose">Hello! I am a PhD Candidate working under the supervision of <a href="https://chriskanan.com/">Dr. Christopher Kanan</a> in <a href="http://www.cis.rit.edu/">Chester F. Carlson Center for Imaging Science</a>
             at <a href="https://www.rit.edu/">Rochester Institute of Technology (RIT)</a>. My current research focuses on self-supervised learning and continual learning. I am mainly interested in efficient continual representation learning systems with minimal supervision.
             Previously, I interned at <a href="https://www.siemens-healthineers.com/">Siemens Healthineers</a>, where I worked on self-supervised learning techniques for medical imaging.
             </p>
-            <p align="justify">
+            <p class="about-prose">
             I received an BS in Mechatronics Engineering from <a href="https://www.uni.edu.pe/">Universidad Nacional de Ingeniería</a> where I worked on deep learning techniques for diabetic retinopathy detection and 
             Simultaneous Localization and Mapping (SLAM) techniques for mobile robot exploration.
             </p>
-            <p align="justify"> 
+            <p> 
                 You can find my <a href="data/Jhair_Gallardo_CV.pdf"><span class="highlight-link">CV here</span>.</a>
             </p>
-            <p align="justify">
+            <p>
                 Here is my <a href="https://scholar.google.com/citations?user=gFQHAtQAAAAJ&hl=en&oi=sra" target="_blank" rel="noopener noreferrer"><span class="highlight-link">Google Scholar</span>.</a>
 			</p>
         </h4>
@@ -706,7 +748,7 @@
     <!-- ICML 2025 -->
     <div class="row">
 		<div class="col-sm-8 col-sm-offset-2">
-			<h3><strong>ICML 2025</strong>: Controlling Neural Collapse Enhances Out-of-Distribution Detection and Transfer Learning</h3>
+			<h3><span class="venue-tag">ICML 2025</span>: Controlling Neural Collapse Enhances Out-of-Distribution Detection and Transfer Learning</h3>
 			<h4>Md Yousuf Harun, <strong>Jhair Gallardo</strong>, Christopher Kanan</h4>
 			<h3>
 				<a class="button" href="https://arxiv.org/abs/2502.10691" target="_blank" rel="noopener noreferrer">arXiv</a>
@@ -733,7 +775,7 @@
     <!-- NeurIPS 2024 -->
     <div class="row">
 		<div class="col-sm-8 col-sm-offset-2">
-			<h3><strong>NeurIPS 2024</strong>: What Variables Affect Out-Of-Distribution Generalization in Pretrained Models?</h3>
+			<h3><span class="venue-tag">NeurIPS 2024</span>: What Variables Affect Out-Of-Distribution Generalization in Pretrained Models?</h3>
 			<h4>Md Yousuf Harun,  Kyungbok Lee, <strong>Jhair Gallardo</strong>, Giri Krishnan, Christopher Kanan</h4>
 			<h3>
 				<a class="button" href="https://arxiv.org/abs/2405.15018" target="_blank" rel="noopener noreferrer">arXiv</a>
@@ -759,7 +801,7 @@
     <!-- SoSE 2024 -->
     <div class="row">
 		<div class="col-sm-8 col-sm-offset-2">
-			<h3><strong>SoSE 2024</strong>: Human Emotion Estimation through Physiological Data with Neural Networks</h3>
+			<h3><span class="venue-tag">SoSE 2024</span>: Human Emotion Estimation through Physiological Data with Neural Networks</h3>
 			<h4><strong>Jhair Gallardo</strong>, Celal Savur, Ferat Sahin, Christopher Kanan</h4>
 			<h3>
 				<a class="button" href="https://edas.info/web/sose2024/showManuscript.php?m=1571024835&type=final&ext=pdf&title=PDF+file" target="_blank" rel="noopener noreferrer">Paper</a>
@@ -786,7 +828,7 @@
     <!-- CoLLAs 2024 -->
 	<div class="row">
 		<div class="col-sm-8 col-sm-offset-2">
-			<h3><strong>CoLLAs 2024</strong>: GRASP: A Rehearsal Policy for Efficient Online Continual Learning</h3>
+			<h3><span class="venue-tag">CoLLAs 2024</span>: GRASP: A Rehearsal Policy for Efficient Online Continual Learning</h3>
 			<h4>Md Yousuf Harun, <strong>Jhair Gallardo</strong>, Christopher Kanan</h4>
 			<h3>
 				<a class="button" href="https://arxiv.org/abs/2308.13646" target="_blank" rel="noopener noreferrer">arXiv</a>
@@ -808,7 +850,7 @@
 	<!-- TMLR 2023 -->
 	<div class="row">
 		<div class="col-sm-8 col-sm-offset-2">
-			<h3><strong>TMLR 2023</strong>: SIESTA: Efficient Online Continual Learning with Sleep</h3>
+			<h3><span class="venue-tag">TMLR 2023</span>: SIESTA: Efficient Online Continual Learning with Sleep</h3>
 			<h4>Md Yousuf Harun*, <strong>Jhair Gallardo</strong>*, Tyler L. Hayes, Ronald Kemker, Christopher Kanan</h4>
             <h3>Also presented at the Journal Track of CoLLAs 2024</h3>
             <h6>* denotes equal contribution.</h6>
@@ -843,7 +885,7 @@
     <!-- CVPRW 2023 -->
 	<div class="row">
 		<div class="col-sm-8 col-sm-offset-2">
-			<h3><strong>CVPRW 2023</strong>: How Efficient Are Today's Continual Learning Algorithms?</h3>
+			<h3><span class="venue-tag">CVPRW 2023</span>: How Efficient Are Today's Continual Learning Algorithms?</h3>
 			<h4>Md Yousuf Harun, <strong>Jhair Gallardo</strong>, Tyler L. Hayes, Christopher Kanan</h4>
 			<h3>
 				<a class="button" href="https://arxiv.org/abs/2303.18171" target="_blank" rel="noopener noreferrer">arXiv</a>
@@ -865,7 +907,7 @@
 	<!-- BMVC 2021 -->
 	<div class="row">
 		<div class="col-sm-8 col-sm-offset-2">
-			<h3><strong>BMVC 2021</strong>: Self-Supervised Training Enhances Online Continual Learning</h3>
+			<h3><span class="venue-tag">BMVC 2021</span>: Self-Supervised Training Enhances Online Continual Learning</h3>
 			<h4><strong>Jhair Gallardo</strong>, Tyler L. Hayes, Christopher Kanan</h4>
 			<h3>
 				<a class="button" href="https://arxiv.org/abs/2103.14010" target="_blank" rel="noopener noreferrer">arXiv</a>
@@ -949,10 +991,18 @@
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
+  <p>&copy; <span id="footer-year"></span> Jhair Gallardo</p>
+  <p>
+    <a href="mailto:jhairgallardo@gmail.com">Email</a> &middot;
+    <a href="https://scholar.google.com/citations?user=gFQHAtQAAAAJ&hl=en&oi=sra" target="_blank" rel="noopener noreferrer">Google Scholar</a> &middot;
+    <a href="https://github.com/jhairgallardo" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </p>
 </footer>
 
 <script>
 $(document).ready(function(){
+  $("#footer-year").text(new Date().getFullYear());
+
   $("a[href]").on("click", function() {
     var href = this.getAttribute("href");
 
