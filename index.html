@@ -22,6 +22,7 @@
     <meta name="keywords" content="gianmarco, jhair, gallardo, callalli, rit, rochester institute of technology, new york, computer vision, deep-learning, machine-learning, machine learning, deep learning, artificial intelligence, AI, image, RIT, Rochester, rochester, lifelong learning, continual learning, self-supervised learning, ssl">
     <meta name="author" content="Jhair Gallardo">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -424,6 +425,19 @@
         }
         
         @media screen and (max-width: 768px) {
+            .navbar {
+                letter-spacing: 1px;
+            }
+            .navbar-nav > li > a {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .container-fluid {
+                padding: 45px 24px;
+            }
+            .external-link-center-wrapper {
+                max-width: 100%;
+            }
             .col-sm-4 {
                 text-align: center;
                 margin: 25px 0;
@@ -441,42 +455,59 @@
         }
         
         .external-link-icon {
-            float: left;
-            margin: 0pt 5pt;
+            float: none;
+            margin: 0;
             width: 50pt;
             height: 50pt;
             opacity: 1;
         }
         
-        .external-link-icon img {
+        .external-link-icon a {
+            text-decoration: none;
+        }
+
+        .external-link-circle {
             width: 50pt;
             height: 50pt;
-            padding: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             border: 1px solid var(--border);
             border-radius: 50%;
             background-color: rgba(255, 255, 255, 0.9);
             box-sizing: border-box;
-            object-fit: contain;
-            transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease, background-color 180ms ease;
+            color: var(--text);
+            text-decoration: none;
+            transition: color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease, background-color 180ms ease;
         }
         
-        .external-link-icon img:hover {
+        .external-link-icon a:hover .external-link-circle,
+        .external-link-icon a:focus .external-link-circle {
             border-color: var(--accent);
+            color: var(--accent-hover);
             background-color: #FFFFFF;
-            box-shadow: 0 8px 22px rgba(15, 118, 110, 0.18);
+            box-shadow: 0 8px 22px rgba(16, 112, 160, 0.18);
             transform: translateY(-2px);
+        }
+
+        .external-link-circle i {
+            font-size: 25px;
+            line-height: 1;
         }
         
         .external-link-container {
             text-align: center;
             width: 100%;
-            height: 60pt;
+            min-height: 60pt;
         }
         
         .external-link-center-wrapper {
-            margin: 20px auto auto;
-            width: 300pt;
-            height: 60pt;
+            margin: 20px auto 0;
+            width: auto;
+            min-height: 60pt;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
         }
         
         .button {
@@ -497,9 +528,7 @@
         }
         
         .button:hover,
-        .button:focus,
-        a:hover .button,
-        a:focus .button {
+        .button:focus {
             background-color: #FFFFFF;
             border-color: var(--accent);
             color: var(--accent-hover);
@@ -564,47 +593,45 @@
                     <li><a href="#recent">NEWS</a></li>
                     <li><a href="#research">RESEARCH</a></li>
                     <li><a href="#publications">PUBLICATIONS</a></li>
-                    <li data-toggle="collapse" data-target=".navbar-collapse.in"><a href="data/Jhair_Gallardo_CV.pdf" onclick="getOutboundLink('data/Jhair_Gallardo_CV.pdf'); return false;" target="_blank">CV</a></li>
-                    </h1>
+                    <li data-toggle="collapse" data-target=".navbar-collapse.in"><a href="data/Jhair_Gallardo_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
     <div class="jumbotron text-center">
+    <h1>Jhair Gallardo</h1>
         
   	<div class = "external-link-container">
 	  <div class="external-link-center-wrapper">
 	    <div class = "external-link-icon">
-	    	<a href="https://linkedin.com/in/jhairgallardo" onclick="getOutboundLink('https://linkedin.com/in/jhairgallardo'); return false;" target="_blank">
-            	<span><img border="0" alt="Jhair Gallardo Linkedin" src="images/linkedin-logo.png"></img></span>
+	    	<a href="https://linkedin.com/in/jhairgallardo" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                <span class="external-link-circle"><i class="fab fa-linkedin-in"></i></span>
             </a>
 	    </div>
 	    <div class = "external-link-icon">
-	    	<a href="https://scholar.google.com/citations?user=gFQHAtQAAAAJ&hl=en&oi=sra" onclick="getOutboundLink('https://scholar.google.com/citations?user=gFQHAtQAAAAJ&hl=en&oi=sra'); return false;" target="_blank">
-            	<span><img border="0" alt="Jhair Gallardo Google Scholar" src="images/gs-logo.png"></img></span>
+	    	<a href="https://scholar.google.com/citations?user=gFQHAtQAAAAJ&hl=en&oi=sra" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar">
+                <span class="external-link-circle"><i class="fas fa-graduation-cap"></i></span>
             </a>
 	    </div>
 		<div class = "external-link-icon">
-	    	<a href="https://github.com/jhairgallardo" onclick="getOutboundLink('https://github.com/jhairgallardo'); return false;" target="_blank">
-				<span><img border="0" alt="Jhair Gallardo GitHub" src="images/github-logo.png"></img></span>
+	    	<a href="https://github.com/jhairgallardo" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+				<span class="external-link-circle"><i class="fab fa-github"></i></span>
             </a>
 	    </div>
 		<div class = "external-link-icon">
-	    	<a href="https://twitter.com/jhairgallardo" onclick="getOutboundLink('https://twitter.com/jhairgallardo'); return false;" target="_blank">
-				<span><img border="0" alt="Jhair Gallardo Twitter" src="images/twitter-logo.png"></img></span>
+	    	<a href="https://twitter.com/jhairgallardo" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter">
+				<span class="external-link-circle"><i class="fab fa-twitter"></i></span>
             </a>
 	    </div>
 	    <div class = "external-link-icon">
-	    	<a href="" rel="nofollow" onclick="this.href='mailto:' + 'gg4099' + '@' + 'rit.edu'" target="_blank">
-            	<span><img border="0" alt="Jhair Gallardo Contact" src="images/mail-logo.png"></img></span>
+	    	<a href="mailto:gg4099@rit.edu" aria-label="Email" title="Email">
+                <span class="external-link-circle"><i class="fas fa-envelope"></i></span>
             </a>
 	    </div>
 	  </div>
 	</div>
-    <h1>Jhair Gallardo<br>
 </div>
-
-  </form>
 
 <!-- Container (About Section) -->
 <div id="about" class="container-fluid section-about-me">
@@ -624,7 +651,7 @@
                 You can find my <a href="data/Jhair_Gallardo_CV.pdf"><span class="highlight-link">CV here</span>.</a>
             </p>
             <p align="justify">
-                Here is my <a href="https://scholar.google.com/citations?user=gFQHAtQAAAAJ&hl=en&oi=sra" onclick="getOutboundLink(https://scholar.google.com/citations?user=gFQHAtQAAAAJ&hl=en&oi=sra); return false;" target="_blank"><span class="highlight-link">Google Scholar</span>.</a>
+                Here is my <a href="https://scholar.google.com/citations?user=gFQHAtQAAAAJ&hl=en&oi=sra" target="_blank" rel="noopener noreferrer"><span class="highlight-link">Google Scholar</span>.</a>
 			</p>
         </h4>
 	</div>
@@ -641,7 +668,7 @@
       <h2>News</h2>
 	  
 		<!-- Recent News -->
-        <!-- <h4><strong>Oct 2023:</strong> <span class="newflag">Upcoming!</span> We will host the first <a href="https://unconf.continualai.org/" onclick="getOutboundLink('https://unconf.continualai.org/'); return false;">ContinualAI Unconference</a>!</h4> -->
+        <!-- <h4><strong>Oct 2023:</strong> <span class="newflag">Upcoming!</span> We will host the first <a href="https://unconf.continualai.org/">ContinualAI Unconference</a>!</h4> -->
         <!-- <h4><strong>Sep 2024:</strong> <span class="newflag">New!</span> Our paper <a href="https://arxiv.org/abs/2405.15018">"What Variables Affect Out-Of-Distribution Generalization in Pretrained Models?"</a> got accepted in NeurIPS 2024!</h4> -->
         <h4><strong>May 2025:</strong> Our paper <a href="https://arxiv.org/abs/2502.10691">"Controlling Neural Collapse Enhances Out-of-Distribution Detection and Transfer Learning"</a> got accepted in ICML 2025!</h4>
         <h4><strong>Sep 2024:</strong> Our paper <a href="https://arxiv.org/abs/2405.15018">"What Variables Affect Out-Of-Distribution Generalization in Pretrained Models?"</a> got accepted in NeurIPS 2024!</h4>
@@ -682,9 +709,9 @@
 			<h3><strong>ICML 2025</strong>: Controlling Neural Collapse Enhances Out-of-Distribution Detection and Transfer Learning</h3>
 			<h4>Md Yousuf Harun, <strong>Jhair Gallardo</strong>, Christopher Kanan</h4>
 			<h3>
-				<a href="https://arxiv.org/abs/2502.10691" onclick="getOutboundLink('https://arxiv.org/abs/2502.10691'); return false;" target="_blank"><button class="button">arXiv</button></a>
-                <!-- <a href="https://openreview.net/pdf?id=MqDVlBWRRV" onclick="getOutboundLink('https://openreview.net/pdf?id=MqDVlBWRRV'); return false;" target="_blank"><button class="button">Paper</button></a> -->
-                <a href="https://yousuf907.github.io/ncoodg/" onclick="getOutboundLink('https://yousuf907.github.io/ncoodg/'); return false;" target="_blank"><button class="button">Project Page</button></a>
+				<a class="button" href="https://arxiv.org/abs/2502.10691" target="_blank" rel="noopener noreferrer">arXiv</a>
+                <!-- <a class="button" href="https://openreview.net/pdf?id=MqDVlBWRRV" target="_blank" rel="noopener noreferrer">Paper</a> -->
+                <a class="button" href="https://yousuf907.github.io/ncoodg/" target="_blank" rel="noopener noreferrer">Project Page</a>
 			</h3>
 		</div>
 	</div>
@@ -709,9 +736,9 @@
 			<h3><strong>NeurIPS 2024</strong>: What Variables Affect Out-Of-Distribution Generalization in Pretrained Models?</h3>
 			<h4>Md Yousuf Harun,  Kyungbok Lee, <strong>Jhair Gallardo</strong>, Giri Krishnan, Christopher Kanan</h4>
 			<h3>
-				<a href="https://arxiv.org/abs/2405.15018" onclick="getOutboundLink('https://arxiv.org/abs/2405.15018'); return false;" target="_blank"><button class="button">arXiv</button></a>
-                <!-- <a href="https://openreview.net/pdf?id=MqDVlBWRRV" onclick="getOutboundLink('https://openreview.net/pdf?id=MqDVlBWRRV'); return false;" target="_blank"><button class="button">Paper</button></a> -->
-                <a href="https://yousuf907.github.io/oodg/" onclick="getOutboundLink('https://yousuf907.github.io/oodg/'); return false;" target="_blank"><button class="button">Project Page</button></a>
+				<a class="button" href="https://arxiv.org/abs/2405.15018" target="_blank" rel="noopener noreferrer">arXiv</a>
+                <!-- <a class="button" href="https://openreview.net/pdf?id=MqDVlBWRRV" target="_blank" rel="noopener noreferrer">Paper</a> -->
+                <a class="button" href="https://yousuf907.github.io/oodg/" target="_blank" rel="noopener noreferrer">Project Page</a>
 			</h3>
 		</div>
 	</div>
@@ -735,9 +762,9 @@
 			<h3><strong>SoSE 2024</strong>: Human Emotion Estimation through Physiological Data with Neural Networks</h3>
 			<h4><strong>Jhair Gallardo</strong>, Celal Savur, Ferat Sahin, Christopher Kanan</h4>
 			<h3>
-				<a href="https://edas.info/web/sose2024/showManuscript.php?m=1571024835&type=final&ext=pdf&title=PDF+file" onclick="getOutboundLink('https://edas.info/web/sose2024/showManuscript.php?m=1571024835&type=final&ext=pdf&title=PDF+file'); return false;" target="_blank"><button class="button">Paper</button></a>
-                <!-- <a href="https://openreview.net/pdf?id=MqDVlBWRRV" onclick="getOutboundLink('https://openreview.net/pdf?id=MqDVlBWRRV'); return false;" target="_blank"><button class="button">Paper</button></a> -->
-                <!-- <a href="https://yousuf907.github.io/oodg/" onclick="getOutboundLink('https://yousuf907.github.io/oodg/'); return false;" target="_blank"><button class="button">Project Page</button></a> -->
+				<a class="button" href="https://edas.info/web/sose2024/showManuscript.php?m=1571024835&type=final&ext=pdf&title=PDF+file" target="_blank" rel="noopener noreferrer">Paper</a>
+                <!-- <a class="button" href="https://openreview.net/pdf?id=MqDVlBWRRV" target="_blank" rel="noopener noreferrer">Paper</a> -->
+                <!-- <a class="button" href="https://yousuf907.github.io/oodg/" target="_blank" rel="noopener noreferrer">Project Page</a> -->
 			</h3>
 		</div>
 	</div>
@@ -762,9 +789,9 @@
 			<h3><strong>CoLLAs 2024</strong>: GRASP: A Rehearsal Policy for Efficient Online Continual Learning</h3>
 			<h4>Md Yousuf Harun, <strong>Jhair Gallardo</strong>, Christopher Kanan</h4>
 			<h3>
-				<a href="https://arxiv.org/abs/2308.13646" onclick="getOutboundLink('https://arxiv.org/abs/2308.13646'); return false;" target="_blank"><button class="button">arXiv</button></a>
-                <a href="https://drive.google.com/file/d/1Q-KITER5OXKhF-JHY4OshqlNxeVfbcnP/view" onclick="getOutboundLink('https://drive.google.com/file/d/1Q-KITER5OXKhF-JHY4OshqlNxeVfbcnP/view'); return false;" target="_blank"><button class="button">Paper</button></a>
-                <a href="https://yousuf907.github.io/graspsite" onclick="getOutboundLink('https://yousuf907.github.io/graspsite'); return false;" target="_blank"><button class="button">Project Page</button></a>
+				<a class="button" href="https://arxiv.org/abs/2308.13646" target="_blank" rel="noopener noreferrer">arXiv</a>
+                <a class="button" href="https://drive.google.com/file/d/1Q-KITER5OXKhF-JHY4OshqlNxeVfbcnP/view" target="_blank" rel="noopener noreferrer">Paper</a>
+                <a class="button" href="https://yousuf907.github.io/graspsite" target="_blank" rel="noopener noreferrer">Project Page</a>
 			</h3>
 		</div>
 	</div>
@@ -786,9 +813,9 @@
             <h3>Also presented at the Journal Track of CoLLAs 2024</h3>
             <h6>* denotes equal contribution.</h6>
 			<h3>
-				<a href="https://arxiv.org/abs/2303.10725" onclick="getOutboundLink('https://arxiv.org/abs/2303.10725'); return false;" target="_blank"><button class="button">arXiv</button></a>
-                <a href="https://openreview.net/pdf?id=MqDVlBWRRV" onclick="getOutboundLink('https://openreview.net/pdf?id=MqDVlBWRRV'); return false;" target="_blank"><button class="button">Paper</button></a>
-                <a href="https://yousuf907.github.io/siestasite/" onclick="getOutboundLink('https://yousuf907.github.io/siestasite/'); return false;" target="_blank"><button class="button">Project Page</button></a>
+				<a class="button" href="https://arxiv.org/abs/2303.10725" target="_blank" rel="noopener noreferrer">arXiv</a>
+                <a class="button" href="https://openreview.net/pdf?id=MqDVlBWRRV" target="_blank" rel="noopener noreferrer">Paper</a>
+                <a class="button" href="https://yousuf907.github.io/siestasite/" target="_blank" rel="noopener noreferrer">Project Page</a>
 			</h3>
 		</div>
 	</div>
@@ -819,9 +846,9 @@
 			<h3><strong>CVPRW 2023</strong>: How Efficient Are Today's Continual Learning Algorithms?</h3>
 			<h4>Md Yousuf Harun, <strong>Jhair Gallardo</strong>, Tyler L. Hayes, Christopher Kanan</h4>
 			<h3>
-				<a href="https://arxiv.org/abs/2303.18171" onclick="getOutboundLink('https://arxiv.org/abs/2303.18171'); return false;" target="_blank"><button class="button">arXiv</button></a>
-				<a href="https://openaccess.thecvf.com/content/CVPR2023W/CLVision/papers/Harun_How_Efficient_Are_Todays_Continual_Learning_Algorithms_CVPRW_2023_paper.pdf" onclick="getOutboundLink('https://openaccess.thecvf.com/content/CVPR2023W/CLVision/papers/Harun_How_Efficient_Are_Todays_Continual_Learning_Algorithms_CVPRW_2023_paper.pdf'); return false;" target="_blank"><button class="button">Paper</button></a>
-                <a href="https://yousuf907.github.io/files/Poster_CVPRW_2023.pdf" onclick="getOutboundLink('https://yousuf907.github.io/files/Poster_CVPRW_2023.pdf'); return false;" target="_blank"><button class="button">Poster</button></a>
+				<a class="button" href="https://arxiv.org/abs/2303.18171" target="_blank" rel="noopener noreferrer">arXiv</a>
+				<a class="button" href="https://openaccess.thecvf.com/content/CVPR2023W/CLVision/papers/Harun_How_Efficient_Are_Todays_Continual_Learning_Algorithms_CVPRW_2023_paper.pdf" target="_blank" rel="noopener noreferrer">Paper</a>
+                <a class="button" href="https://yousuf907.github.io/files/Poster_CVPRW_2023.pdf" target="_blank" rel="noopener noreferrer">Poster</a>
             </h3>
 		</div>
 	</div>
@@ -841,8 +868,8 @@
 			<h3><strong>BMVC 2021</strong>: Self-Supervised Training Enhances Online Continual Learning</h3>
 			<h4><strong>Jhair Gallardo</strong>, Tyler L. Hayes, Christopher Kanan</h4>
 			<h3>
-				<a href="https://arxiv.org/abs/2103.14010" onclick="getOutboundLink('https://arxiv.org/abs/2103.14010'); return false;" target="_blank"><button class="button">arXiv</button></a>
-				<a href="https://www.bmvc2021-virtualconference.com/assets/papers/0636.pdf" onclick="getOutboundLink('https://www.bmvc2021-virtualconference.com/assets/papers/0636.pdf'); return false;" target="_blank"><button class="button">Paper</button></a>
+				<a class="button" href="https://arxiv.org/abs/2103.14010" target="_blank" rel="noopener noreferrer">arXiv</a>
+				<a class="button" href="https://www.bmvc2021-virtualconference.com/assets/papers/0636.pdf" target="_blank" rel="noopener noreferrer">Paper</a>
 			</h3>
 		</div>
 	</div>
@@ -865,22 +892,22 @@
 			<h2>Publications</h2>
 			<h4>Peer-Reviewed Papers</h4>
 			<h5><ul style="list-style-type:circle">
-                <li>M.Y. Harun, <strong>J. Gallardo</strong>, and C. Kanan. <a href="https://arxiv.org/abs/2502.10691" onclick="getOutboundLink('https://arxiv.org/abs/2502.10691'); return false;">Controlling Neural Collapse Enhances Out-of-Distribution Detection and Transfer Learning</a>. In: International Conference on Machine Learning (ICML), 2025</li>
-                <li>M.Y. Harun, K. Lee, <strong>J. Gallardo</strong>, G. Krishnan, and C. Kanan. <a href="https://arxiv.org/abs/2405.15018" onclick="getOutboundLink('https://arxiv.org/abs/2405.15018'); return false;">What Variables Affect Out-Of-Distribution Generalization in Pretrained Models?</a>. In: Conference on Neural Information Processing Systems (NeurIPS), 2024</li>
-                <li><strong>J. Gallardo</strong>, C. Savur, F. Sahin, and C. Kanan. <a href="https://edas.info/web/sose2024/showManuscript.php?m=1571024835&type=final&ext=pdf&title=PDF+file" onclick="getOutboundLink('https://edas.info/web/sose2024/showManuscript.php?m=1571024835&type=final&ext=pdf&title=PDF+file'); return false;">Human Emotion Estimation through Physiological Data with Neural Networks</a>. In: System of Systems Engineering Conference (SoSE), 2024</li>
-                <li>M.Y. Harun, <strong>J. Gallardo</strong>, and C. Kanan. <a href="https://arxiv.org/abs/2308.13646" onclick="getOutboundLink('https://arxiv.org/abs/2308.13646'); return false;">GRASP: A Rehearsal Policy for Efficient Online Continual Learning</a>. In: Conference on Lifelong Learning Agents (CoLLAs), 2024</li>
-                <li>M.Y. Harun, <strong>J. Gallardo</strong>, T.L. Hayes, R. Kemker, and C. Kanan. <a href="https://arxiv.org/abs/2303.10725" onclick="getOutboundLink('https://arxiv.org/abs/2303.10725'); return false;">SIESTA: Efficient online continual learning with sleep</a>. Transactions on Machine Learning Research (TMLR), 2023</li>
-				<li>M.Y. Harun, <strong>J. Gallardo</strong>, T.L. Hayes and C. Kanan. <a href="https://arxiv.org/abs/2303.18171" onclick="getOutboundLink('https://arxiv.org/abs/2303.18171'); return false;">How efficient are today's continual learning algorithms?</a>. CVPR Workshop: Continual Learning in Computer Vision, 2023</li>
-                <li>I. Sur, Z. Daniels, A. Rahman, K. Faber, <strong>J. Gallardo</strong>, T.L. Hayes, C.E. Taylor, M.B. Gurbuz, J. Smith, S. Joshi, N. Japkowicz, M. Baron, Z. Kira, C. Kanan, R. Corizzo, A. Divakaran, M. Piacentino, J. Hostetler, and A. Raghavan. <a href="https://arxiv.org/abs/2212.04603" onclick="getOutboundLink('https://arxiv.org/abs/2212.04603'); return false;">System design for an integrated lifelong reinforcement learning agent for real-time strategy games</a>. In: International Conference on AI-ML Systems, 2022</li>
-				<li><strong>J. Gallardo</strong>, T.L. Hayes, and C. Kanan. <a href="https://arxiv.org/abs/2103.14010" onclick="getOutboundLink('https://arxiv.org/abs/2103.14010'); return false;">Self-supervised training enhances online continual learning</a>. In: British Machine Vision Conference (BMVC), 2021</li>
-                <li>G. Garcia, <strong>J. Gallardo</strong>, A. Mauricio, J. Lopez, and C. del Carpio. <a href="https://link.springer.com/chapter/10.1007/978-3-319-68612-7_72" onclick="getOutboundLink('https://link.springer.com/chapter/10.1007/978-3-319-68612-7_72'); return false;">Detection of Diabetic Retinopathy Based on a Convolutional Neural Network Using Retinal Fundus Images</a>. In: International Conference on Artificial Neural Networks (ICANN), 2017</li>
-                <li>A. Mauricio, A. Nieves, Y. Castillo, K. Hilasaca, C. Fonseca, <strong>J. Gallardo</strong>, R. Rodriguez, and G. Rodriguez. <a href="https://link.springer.com/chapter/10.1007/978-3-319-09858-6_10" onclick="getOutboundLink('https://link.springer.com/chapter/10.1007/978-3-319-09858-6_10'); return false;">Multi-robot Exploration and Mapping Strategy in Underground Mines by Behavior Control</a>. In: Multibody Systems and Mechatronics (MuSMe), 2014</li>
+                <li>M.Y. Harun, <strong>J. Gallardo</strong>, and C. Kanan. <a href="https://arxiv.org/abs/2502.10691">Controlling Neural Collapse Enhances Out-of-Distribution Detection and Transfer Learning</a>. In: International Conference on Machine Learning (ICML), 2025</li>
+                <li>M.Y. Harun, K. Lee, <strong>J. Gallardo</strong>, G. Krishnan, and C. Kanan. <a href="https://arxiv.org/abs/2405.15018">What Variables Affect Out-Of-Distribution Generalization in Pretrained Models?</a>. In: Conference on Neural Information Processing Systems (NeurIPS), 2024</li>
+                <li><strong>J. Gallardo</strong>, C. Savur, F. Sahin, and C. Kanan. <a href="https://edas.info/web/sose2024/showManuscript.php?m=1571024835&type=final&ext=pdf&title=PDF+file">Human Emotion Estimation through Physiological Data with Neural Networks</a>. In: System of Systems Engineering Conference (SoSE), 2024</li>
+                <li>M.Y. Harun, <strong>J. Gallardo</strong>, and C. Kanan. <a href="https://arxiv.org/abs/2308.13646">GRASP: A Rehearsal Policy for Efficient Online Continual Learning</a>. In: Conference on Lifelong Learning Agents (CoLLAs), 2024</li>
+                <li>M.Y. Harun, <strong>J. Gallardo</strong>, T.L. Hayes, R. Kemker, and C. Kanan. <a href="https://arxiv.org/abs/2303.10725">SIESTA: Efficient online continual learning with sleep</a>. Transactions on Machine Learning Research (TMLR), 2023</li>
+				<li>M.Y. Harun, <strong>J. Gallardo</strong>, T.L. Hayes and C. Kanan. <a href="https://arxiv.org/abs/2303.18171">How efficient are today's continual learning algorithms?</a>. CVPR Workshop: Continual Learning in Computer Vision, 2023</li>
+                <li>I. Sur, Z. Daniels, A. Rahman, K. Faber, <strong>J. Gallardo</strong>, T.L. Hayes, C.E. Taylor, M.B. Gurbuz, J. Smith, S. Joshi, N. Japkowicz, M. Baron, Z. Kira, C. Kanan, R. Corizzo, A. Divakaran, M. Piacentino, J. Hostetler, and A. Raghavan. <a href="https://arxiv.org/abs/2212.04603">System design for an integrated lifelong reinforcement learning agent for real-time strategy games</a>. In: International Conference on AI-ML Systems, 2022</li>
+				<li><strong>J. Gallardo</strong>, T.L. Hayes, and C. Kanan. <a href="https://arxiv.org/abs/2103.14010">Self-supervised training enhances online continual learning</a>. In: British Machine Vision Conference (BMVC), 2021</li>
+                <li>G. Garcia, <strong>J. Gallardo</strong>, A. Mauricio, J. Lopez, and C. del Carpio. <a href="https://link.springer.com/chapter/10.1007/978-3-319-68612-7_72">Detection of Diabetic Retinopathy Based on a Convolutional Neural Network Using Retinal Fundus Images</a>. In: International Conference on Artificial Neural Networks (ICANN), 2017</li>
+                <li>A. Mauricio, A. Nieves, Y. Castillo, K. Hilasaca, C. Fonseca, <strong>J. Gallardo</strong>, R. Rodriguez, and G. Rodriguez. <a href="https://link.springer.com/chapter/10.1007/978-3-319-09858-6_10">Multi-robot Exploration and Mapping Strategy in Underground Mines by Behavior Control</a>. In: Multibody Systems and Mechatronics (MuSMe), 2014</li>
                 
             </ul></h5>
 
 			<!-- <h4>Pre-Prints</h4>
 			<h5><ul style="list-style-type:circle">
-                <li>M.Y. Harun, K. Lee, <strong>J. Gallardo</strong>, G. Krishnan, and C. Kanan. <a href="https://arxiv.org/abs/2405.15018" onclick="getOutboundLink('https://arxiv.org/abs/2405.15018'); return false;">What Variables Affect Out-Of-Distribution Generalization in Pretrained Models?</a>. 2024</li>
+                <li>M.Y. Harun, K. Lee, <strong>J. Gallardo</strong>, G. Krishnan, and C. Kanan. <a href="https://arxiv.org/abs/2405.15018">What Variables Affect Out-Of-Distribution Generalization in Pretrained Models?</a>. 2024</li>
             </ul></h5> -->
 		</div>
 	</div>
@@ -926,6 +953,22 @@
 
 <script>
 $(document).ready(function(){
+  $("a[href]").on("click", function() {
+    var href = this.getAttribute("href");
+
+    if (!href || href.charAt(0) === "#" || href.indexOf("mailto:") === 0) {
+      return;
+    }
+
+    if (typeof gtag === "function") {
+      gtag("event", "click", {
+        event_category: "outbound",
+        event_label: this.href,
+        transport_type: "beacon"
+      });
+    }
+  });
+
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
