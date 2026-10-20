@@ -1,0 +1,676 @@
+/* ==========================================================================
+   Jhair Gallardo - personal website
+   Layout inspired by the Owlstown "Argyle" theme: fixed header, banner,
+   sidebar with avatar overlapping the banner, single content column.
+   ========================================================================== */
+
+:root {
+    --text: #212121;
+    --muted: rgba(0, 0, 0, 0.54);
+    --accent: #1070a0;
+    --accent-hover: #075f86;
+    --chrome: #f0f0f0;
+    --background: #ffffff;
+    --border: #cccccc;
+    --hairline: #e6e6e6;
+    --hover: #f5f5f5;
+
+    --header-height: 64px;
+    --container: 960px;
+    --gutter: 24px;
+    --font: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Base
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text);
+    background-color: var(--background);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+a:hover,
+a:focus {
+    color: var(--accent-hover);
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+p {
+    margin: 0 0 16px;
+}
+
+.container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+}
+
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 8px;
+    z-index: 20;
+    padding: 8px 12px;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+
+.skip-link:focus {
+    top: 8px;
+}
+
+/* Header
+   ========================================================================== */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    height: var(--header-height);
+    background-color: var(--chrome);
+}
+
+.site-header .container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 100%;
+}
+
+.site-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    white-space: nowrap;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.site-title:hover,
+.site-title:focus {
+    color: var(--text);
+}
+
+.site-nav {
+    display: flex;
+    margin-left: auto;
+}
+
+.site-nav a {
+    padding: 0 12px;
+    line-height: 32px;
+    white-space: nowrap;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.site-nav a:last-child {
+    padding-right: 0;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+    color: var(--text);
+    text-decoration: underline;
+}
+
+.site-nav a[aria-current="page"] {
+    font-weight: 700;
+}
+
+.nav-toggle {
+    display: none;
+    flex: none;
+    margin-left: auto;
+    padding: 6px 8px;
+    font-size: 22px;
+    line-height: 1;
+    color: var(--text);
+    background: none;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.nav-toggle:hover,
+.nav-toggle[aria-expanded="true"] {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+/* Banner
+   ========================================================================== */
+
+.banner {
+    height: 240px;
+    margin-top: var(--header-height);
+    background: #1d2340 url("../images/banner.jpg") center / cover no-repeat;
+}
+
+/* Main layout
+   ========================================================================== */
+
+.site-main {
+    min-height: calc(90vh - var(--header-height));
+    padding-top: 48px;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    column-gap: 32px;
+}
+
+/* Sidebar (stacked and centred on phones, a left column from 768px)
+   ========================================================================== */
+
+.sidebar {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.avatar {
+    position: relative;
+    width: 240px;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    margin: -168px auto 24px;
+    object-fit: cover;
+    object-position: center 35%;
+    background-color: var(--border);
+    box-shadow: 0 0 0 5px var(--background);
+}
+
+.sidebar-name {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+}
+
+.sidebar p {
+    margin: 0;
+}
+
+.sidebar .sidebar-role {
+    margin-top: 4px;
+}
+
+.sidebar .sidebar-affiliation {
+    margin-top: 24px;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 20px;
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+    color: var(--accent);
+}
+
+.social-links a:hover .social-label,
+.social-links a:focus .social-label {
+    text-decoration: underline;
+}
+
+.social-links i {
+    width: 24px;
+    font-size: 22px;
+    text-align: center;
+    color: var(--muted);
+}
+
+.social-links a:hover i,
+.social-links a:focus i {
+    color: var(--accent);
+}
+
+/* On phones the links are an icon row; labels stay available to screen readers. */
+.social-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+/* Content typography
+   ========================================================================== */
+
+.page-title {
+    font-size: 36px;
+    letter-spacing: -0.02em;
+}
+
+.lead {
+    margin: 12px 0 32px;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+}
+
+.section-title {
+    margin: 48px 0 20px;
+    font-size: 28px;
+    letter-spacing: -0.01em;
+}
+
+.subsection-title {
+    margin: 24px 0 8px;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+/* Buttons
+   ========================================================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    font: inherit;
+    font-size: 15px;
+    line-height: 22px;
+    color: var(--text);
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+    color: var(--text);
+    background-color: var(--hover);
+}
+
+.btn i {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* News
+   ========================================================================== */
+
+.news {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.news li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    padding: 8px 0;
+}
+
+.news-date {
+    font-weight: 700;
+    color: var(--muted);
+    white-space: nowrap;
+}
+
+.tag-new {
+    display: inline-block;
+    margin-right: 6px;
+    padding: 0 8px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    vertical-align: 1px;
+    color: #503600;
+    background-color: #ffdf80;
+    border: 1px solid #e4b64d;
+    border-radius: 999px;
+}
+
+.news-older {
+    margin-top: 12px;
+}
+
+.news-older summary {
+    list-style: none;
+}
+
+.news-older summary::-webkit-details-marker {
+    display: none;
+}
+
+.news-older summary i {
+    transition: transform 150ms ease;
+}
+
+.news-older[open] summary i {
+    transform: rotate(180deg);
+}
+
+.news-older .when-open,
+.news-older[open] .when-closed {
+    display: none;
+}
+
+.news-older[open] .when-open {
+    display: inline;
+}
+
+.news-older .news {
+    margin-top: 12px;
+}
+
+/* Publications
+   ========================================================================== */
+
+.pub {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.pub-thumb img {
+    max-height: 220px;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.pub-thumb:empty {
+    display: none;
+}
+
+.pub-title {
+    margin: 0 0 6px;
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+.pub-title a {
+    text-decoration: none;
+}
+
+.pub-title a:hover,
+.pub-title a:focus {
+    text-decoration: underline;
+}
+
+.pub p {
+    margin: 0;
+}
+
+.pub strong {
+    white-space: nowrap;
+}
+
+.pub-note {
+    font-size: 14px;
+}
+
+.pub-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.plain-list {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.plain-list li {
+    margin-bottom: 4px;
+}
+
+/* CV
+   ========================================================================== */
+
+.cv-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.cv-embed {
+    display: none;
+    width: 100%;
+    aspect-ratio: 8.5 / 11;
+    border: 1px solid var(--hairline);
+}
+
+/* Footer
+   ========================================================================== */
+
+.site-footer {
+    margin-top: 64px;
+    padding: 48px 0;
+    text-align: center;
+    background-color: var(--chrome);
+}
+
+.site-footer p {
+    margin: 0 0 8px;
+}
+
+.site-footer p:last-child {
+    margin-bottom: 0;
+}
+
+.site-footer a {
+    color: var(--text);
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+    color: var(--accent);
+}
+
+/* Breakpoints
+   ========================================================================== */
+
+@media (max-width: 543px) {
+    :root {
+        --gutter: 16px;
+    }
+}
+
+/* Below 768px the nav links don't fit next to the name, so they move into a
+   dropdown opened by the menu button (see js/main.js). */
+@media (max-width: 767px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .site-nav {
+        display: none;
+        position: absolute;
+        top: calc(var(--header-height) - 8px);
+        right: var(--gutter);
+        flex-direction: column;
+        min-width: 200px;
+        padding: 4px 0;
+        background-color: var(--background);
+        border: 1px solid #eeeeee;
+        border-radius: 4px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .site-nav.is-open {
+        display: flex;
+    }
+
+    .site-nav a,
+    .site-nav a:last-child {
+        padding: 8px 16px;
+        line-height: 24px;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus {
+        text-decoration: none;
+        background-color: var(--hover);
+    }
+}
+
+@media (max-width: 399px) {
+    .site-title {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 544px) {
+    .news li {
+        grid-template-columns: 88px minmax(0, 1fr);
+        column-gap: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    .banner {
+        height: 320px;
+    }
+
+    .layout {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    }
+
+    .sidebar {
+        margin-bottom: 0;
+        text-align: left;
+    }
+
+    /* Pull the avatar up so its top half overlaps the banner. */
+    .avatar {
+        width: 100%;
+        margin: calc(-50% - 48px) 0 24px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        margin-top: 32px;
+    }
+
+    .social-links i {
+        font-size: 20px;
+    }
+
+    .social-label {
+        position: static;
+        width: auto;
+        height: auto;
+        overflow: visible;
+        clip: auto;
+    }
+
+    .page-title {
+        font-size: 40px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .pub {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+        gap: 24px;
+    }
+
+    .pub-thumb:empty {
+        display: block;
+    }
+
+    .pub-thumb img {
+        max-height: none;
+        margin: 0;
+    }
+
+    .cv-embed {
+        display: block;
+    }
+
+    .cv-mobile-note {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .layout {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+    }
+
+    .page-title {
+        font-size: 48px;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+}

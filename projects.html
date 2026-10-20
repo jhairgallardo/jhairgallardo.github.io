@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CVZS8EVKF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-2CVZS8EVKF');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projects | Gianmarco Jhair Gallardo</title>
+    <meta name="description" content="Independent projects by Gianmarco Jhair Gallardo, with code on GitHub.">
+    <meta name="author" content="Gianmarco Jhair Gallardo">
+    <link rel="canonical" href="https://jhairgallardo.github.io/projects.html">
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jhairgallardo.github.io/projects.html">
+    <meta property="og:title" content="Projects | Gianmarco Jhair Gallardo">
+    <meta property="og:description" content="Independent projects by Gianmarco Jhair Gallardo, with code on GitHub.">
+    <meta property="og:image" content="https://jhairgallardo.github.io/images/jhair.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Projects | Gianmarco Jhair Gallardo">
+    <meta name="twitter:description" content="Independent projects by Gianmarco Jhair Gallardo, with code on GitHub.">
+    <meta name="twitter:image" content="https://jhairgallardo.github.io/images/jhair.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <a class="site-title" href="index.html">Gianmarco Jhair Gallardo</a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><i class="fas fa-bars" aria-hidden="true"></i></button>
+            <nav id="site-nav" class="site-nav" aria-label="Main">
+                <a href="index.html">Home</a>
+                <a href="publications.html">Publications</a>
+                <a href="projects.html" aria-current="page">Projects</a>
+                <a href="cv.html">CV</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="banner" role="presentation"></div>
+
+    <main id="main" class="site-main">
+        <div class="container layout">
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <img class="avatar" src="images/jhair.jpg" alt="Gianmarco Jhair Gallardo" width="675" height="758">
+                <p class="sidebar-name">Gianmarco Jhair Gallardo</p>
+                <p class="sidebar-role">PhD Candidate</p>
+                <p class="sidebar-affiliation">Chester F. Carlson Center for Imaging Science</p>
+                <p>Rochester Institute of Technology</p>
+                <ul class="social-links">
+                    <li><a href="mailto:jhairgallardo@gmail.com" title="Email"><i class="fas fa-envelope" aria-hidden="true"></i><span class="social-label">Email</span></a></li>
+                    <li><a href="https://scholar.google.com/citations?user=gFQHAtQAAAAJ&amp;hl=en&amp;oi=sra" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="social-label">Google Scholar</span></a></li>
+                    <li><a href="https://github.com/jhairgallardo" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i><span class="social-label">GitHub</span></a></li>
+                    <li><a href="https://linkedin.com/in/jhairgallardo" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i><span class="social-label">LinkedIn</span></a></li>
+                    <li><a href="https://twitter.com/jhairgallardo" target="_blank" rel="noopener noreferrer" title="Twitter"><i class="fab fa-x-twitter" aria-hidden="true"></i><span class="social-label">Twitter</span></a></li>
+                </ul>
+            </aside>
+
+            <!-- Content -->
+            <div class="content">
+                <h1 class="page-title">Independent Projects</h1>
+                <p class="lead">Projects I've built on my own, outside my published research.</p>
+
+                <!-- Each project uses the same layout as a publication; project images live in images/projects/ -->
+
+                <!-- MRI Image Enhancement -->
+                <article class="pub">
+                    <div class="pub-thumb"><img src="images/projects/MRI_enhancement.png" alt="Knee MRI before and after enhancement: degraded input on the left, restored image on the right" width="3460" height="1645" loading="lazy"></div>
+                    <div>
+                        <h3 class="pub-title"><a href="https://github.com/jhairgallardo/mri-fast-acquisition-enhancement-simple-demo" target="_blank" rel="noopener noreferrer">MRI Image Enhancement under Simulated Acquisition Degradation</a></h3>
+                        <p>An end-to-end MRI enhancement pipeline that uses a 2D U-Net to restore knee MRI images degraded by simulated fast acquisition. It includes DICOM preprocessing, case-level data splits, and quantitative evaluation with PSNR, SSIM, and MAE.</p>
+                        <div class="pub-links">
+                            <a class="btn" href="https://github.com/jhairgallardo/mri-fast-acquisition-enhancement-simple-demo" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i>Code</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="footer-year">2026</span> Gianmarco Jhair Gallardo</p>
+            <p>
+                <a href="mailto:jhairgallardo@gmail.com">Email</a> &middot;
+                <a href="https://scholar.google.com/citations?user=gFQHAtQAAAAJ&amp;hl=en&amp;oi=sra" target="_blank" rel="noopener noreferrer">Google Scholar</a> &middot;
+                <a href="https://github.com/jhairgallardo" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
